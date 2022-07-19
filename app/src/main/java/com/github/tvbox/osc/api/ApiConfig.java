@@ -79,7 +79,7 @@ public class ApiConfig {
     }
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://84k.cn/weitv");
+        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://84k.cn/dweitv");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
