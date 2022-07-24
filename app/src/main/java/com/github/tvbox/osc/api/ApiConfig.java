@@ -55,7 +55,8 @@ public class ApiConfig {
     private List<String> vipParseFlags;
     private List<IJKCode> ijkCodes;
     private String spider = null;
-
+    public String wallpaper = "";
+    
     private SourceBean emptyHome = new SourceBean();
 
     private JarLoader jarLoader = new JarLoader();
