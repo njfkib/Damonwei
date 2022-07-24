@@ -349,10 +349,10 @@ public class PlayActivity extends BaseActivity {
                 mVodPlayerCfg.put("sp", 1.0f);
             }
             if (!mVodPlayerCfg.has("st")) {
-                mVodPlayerCfg.put("st", 0);
+                mVodPlayerCfg.put("st", 60);
             }
             if (!mVodPlayerCfg.has("et")) {
-                mVodPlayerCfg.put("et", 0);
+                mVodPlayerCfg.put("et", 60);
             }
         } catch (Throwable th) {
 
