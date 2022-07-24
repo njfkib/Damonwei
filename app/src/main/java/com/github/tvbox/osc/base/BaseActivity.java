@@ -67,6 +67,7 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
     protected void onResume() {
         super.onResume();
         hideSysBar();
+        changeWallpaper(false);
     }
 
     public void hideSysBar() {
@@ -174,7 +175,8 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
     public boolean isBaseOnWidth() {
         return !(screenRatio >= 4.0f);
     }
-protected static BitmapDrawable globalWp = null;
+
+    protected static BitmapDrawable globalWp = null;
 
     public void changeWallpaper(boolean force) {
         if (!force && globalWp != null)
