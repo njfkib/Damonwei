@@ -22,7 +22,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.viewpager.widget.ViewPager;
 
 import com.github.tvbox.osc.R;
@@ -122,6 +122,7 @@ public class HomeActivity extends BaseActivity {
     private void initView() {
         this.topLayout = findViewById(R.id.topLayout);
         this.tvDate = findViewById(R.id.tvDate);
+        this.tvName = findViewById(R.id.tvName);
         this.contentLayout = findViewById(R.id.contentLayout);
         this.mGridView = findViewById(R.id.mGridView);
         this.mViewPager = findViewById(R.id.mViewPager);
@@ -235,7 +236,7 @@ public class HomeActivity extends BaseActivity {
                             @Override
                             public void run() {
                                 if (!useCacheConfig)
-                                    Toast.makeText(HomeActivity.this, "Dwei提醒：首页站点加载成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(HomeActivity.this, "自定义jar加载成功", Toast.LENGTH_SHORT).show();
                                 initData();
                             }
                         }, 50);
@@ -252,7 +253,7 @@ public class HomeActivity extends BaseActivity {
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(HomeActivity.this, "Dwei提醒：首页加载失败请切换站点", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(HomeActivity.this, "jar加载失败", Toast.LENGTH_SHORT).show();
                                 initData();
                             }
                         });
@@ -535,7 +536,8 @@ public class HomeActivity extends BaseActivity {
         AppManager.getInstance().appExit(0);
         ControlManager.get().stopServer();
     }
-void showSiteSwitch() {
+
+    void showSiteSwitch() {
         List<SourceBean> sites = ApiConfig.get().getSourceBeanList();
         if (sites.size() > 0) {
             String homeSourceKey = ApiConfig.get().getHomeSourceBean().getKey();
