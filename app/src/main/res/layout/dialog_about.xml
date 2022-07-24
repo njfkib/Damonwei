@@ -6,6 +6,8 @@
     android:background="@drawable/shape_dialog_bg_main"
     android:orientation="vertical"
     android:padding="@dimen/vs_30">
+    android:linksClickable="true"
+    android:autoLink="web"
 
     <TextView
         android:layout_width="@dimen/vs_600"
