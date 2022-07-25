@@ -591,7 +591,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="换张壁纸"
+                        android:text="壁纸切换"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/ts_24" />
 
@@ -626,7 +626,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="关于"
+                    android:text="关于更新1.5.2"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/ts_24" />
 
