@@ -614,7 +614,6 @@ public class SourceViewModel extends ViewModel {
         }
     }
 }
-                                }
                                 //infoBeanList.add(new Movie.Video.UrlBean.UrlInfo.InfoBean(s.substring(0, s.indexOf("$")), s.substring(s.indexOf("$") + 1)));
                             }
                         }
